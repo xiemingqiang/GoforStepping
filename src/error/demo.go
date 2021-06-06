@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type errorString struct {
 	s string
@@ -17,6 +19,8 @@ func NewError(text string) error  {
 var ErrType = NewError("EOF")
 
 func main()  {
+	//ctx, _ := context.WithCancel(context.Background())
+
 	if ErrType == NewError("EOF"){
 		fmt.Println("Error:", ErrType)
 	}
